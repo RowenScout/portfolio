@@ -5,9 +5,8 @@ class Header extends React.Component {
     return (
       <header>
         <h1>
-          Rowen Scout
+          Header
         </h1>
-
       </header>
     )
   }
