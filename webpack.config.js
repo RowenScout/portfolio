@@ -6,7 +6,7 @@ const HTMLPlugin = require('html-webpack-plugin');
 const ExtractPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: `${__dirname}/src/main.js`,
+  entry: `${__dirname}/app.js`,
   // configured the sourceMap with the devtool prop
   // it maps errors to their appropriate modules and line number
   devtool: 'cheap-eval-source-map',
@@ -19,7 +19,7 @@ module.exports = {
   plugins: [
     // generates an index.html with dynamic script and link tags
     new HTMLPlugin({
-      template: `${__dirname}/src/index.html`,
+      template: `${__dirname}/index.html`,
     }),
     // generates a css bundle from the output of the style loader
     new ExtractPlugin('bundle.[hash].css'),
@@ -45,7 +45,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 sourceMap: true,
-                includePaths: [`${__dirname}/src/style`],
+                includePaths: [`${__dirname}/style`],
               },
             },
           ],
